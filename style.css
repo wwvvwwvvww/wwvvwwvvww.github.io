@@ -1,0 +1,351 @@
+*{
+	font-family: Roboto;
+	font-size: 14px;
+}
+
+html, body {
+    height: 100%;
+}
+
+html{
+	
+    display: table;
+    margin: auto;
+}
+
+body{
+	background-color: rgb(30,30,30);
+	width: 1200px;
+	margin: 0;
+	padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header{
+	background-color: white;
+	height: 48px;
+	width: 1198px;
+	border: 1px solid black;
+	margin: 0px auto;
+	padding: 0;
+}
+
+#middle{
+	float: left;
+	height: 600px;
+	width: 800px;
+	margin: 0;
+	padding: 0;
+}
+
+#overlay{
+	position: absolute;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.2);
+	height: 600px;
+	width: 800px;
+}
+
+#overlayText{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#overlayTextHeader{
+	display: block;
+	width: 100%;
+	height: 20%;
+	line-height: 120px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	font-size: 48px;
+	color: #202020;
+}
+
+#overlayTextContent{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	overflow-y: auto;
+}
+
+#overlayTextTemplate{
+	display: none;
+}
+
+.overlayText{
+	display: block;
+	width: 100%;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+}
+
+.overlayTextName{
+	position: absolute;
+	line-height: 32px;
+	margin: 0;
+	padding: 0 0 0 40px;
+	text-align: left;
+	font-size: 24px;
+	color: #202020;
+	float: left;
+}
+
+.overlayTextScore{
+	line-height: 32px;
+	margin: 0;
+	padding: 0 40px 0 0;
+	text-align: right;
+	font-size: 24px;
+	color: #202020;
+	float: right;
+}
+
+#wordchoices{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.wordchoice{
+	font-size: 32px;
+	height: 48px;
+	margin: auto;
+	left: auto;
+	background-color: #fafafa;
+	border: 1px solid black;
+}
+
+.wordchoice:hover{
+	background-color: #f0f0f0;
+}
+
+#canvas{
+	box-sizing: border-box;
+	border: 1px solid black;
+	background-color: white;
+	height: 600px;
+	width: 800px;
+	margin: 0;
+	padding: 0;
+}
+
+#chat{
+	border: 1px solid black;
+	background-color: white;
+	width: 198px;
+	height: 598px;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+#chatMessageList{
+	height: 575px;
+	width: 198px;
+	overflow-y: auto;
+	display: block;
+}
+
+#chatMessageList p{
+	word-wrap: break-word;
+	padding: 2px;
+	margin: 0;
+	display: block;
+}
+
+#chatMessageList p:nth-child(even)
+{
+    background-color: #efefef;
+}
+
+#userList{
+	background-color: white;
+	height: 598px;
+	width: 198px;
+	border: 1px solid black;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+#userTemplate, #chatTemplate{
+	display: none;
+}
+
+.user{
+	width:198px;
+	height: 42px;
+}
+
+.user:nth-child(even){
+	background-color: #efefef;
+}
+
+.userRank{
+	float: left;
+	font-size: 34px;
+	margin-left: 8px;
+}
+
+.userName{
+	position: absolute;
+	width: 120px;
+	padding-top: 2px;
+	margin-left: 34px;
+	font-size: 18px;
+}
+
+.userScore{
+	position: absolute;
+	width: 120px;
+	font-size: 12px;
+	margin-top: 24px;
+	margin-left: 38px;
+}
+
+.userDrawing{
+	display: none;
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin: 4px;
+}
+
+#formChat{
+	width: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+#formChatInput{
+	box-sizing: border-box;
+	border: 1px solid black;
+	width: 198px;
+	padding: 2px;
+}
+
+#toolsContainer{
+	width: fit-content;
+	height: 45px;
+	padding: 5px 5px 0 0;
+	margin: 0px auto;
+	background-color: white;
+	border: 1px solid black;
+}
+
+#previewColor{
+	width: 38px;
+	height: 38px;
+	margin-left: 5px;
+	float: left;
+	border: 1px solid black;
+}
+
+#colors{
+	width: 209px;
+	height: 38px;
+	border: 1px solid black;
+	float: left;
+	margin-left: 5px;
+}
+
+.color{
+    box-sizing: border-box;
+	width: 19px;
+	height: 19px;
+	float: left;
+}
+
+.color:hover{
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.tool{
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin-left: 5px;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.tool:hover{
+	cursor: pointer;
+	background-color: lightgray;
+}
+
+.tool-selected{
+	width: 38px;
+	height: 38px;
+	float: left;
+	margin-left: 5px;
+	border: 1px solid black;
+	background-color: darkgray;
+}
+
+#timeLeft{
+	font-size: 34px;
+	text-align: center;
+	line-height: 48px;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	padding-left: 2px;
+	margin: 0;
+	float: left;
+}
+
+#currentWord{
+	letter-spacing: 2px;
+	font-family: consolas;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: center;
+	margin: 0px auto;
+	padding: 0;
+}
+
+#connectDialog{
+
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	z-index: 1;
+
+}
+
+.connectDialog-content{
+    background-color: #fefefe;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 20px 10px 20px;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+#formFieldServerHost, #formFieldNickname, #formBtnConnect{
+	display: block;
+	border: 1px solid black;
+	padding: 3px 5px;
+	margin: 0px auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

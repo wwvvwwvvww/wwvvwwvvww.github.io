@@ -1,0 +1,28 @@
+receive:
+
+Server:
+	0: name
+	2: chat
+	3: start draw
+	4: draw drag
+	5: finish draw
+	6: clear draw
+	7: word choice
+Client:
+	0: user list
+	1: id
+	2: chat
+	3: start draw
+	4: draw drag
+	5: finish draw
+	6: clear draw
+	7: current drawer
+	8: time
+	9: words
+	a: word/hint
+	b: finish/word
+	c: draw history
+	d: finish pick
+	e: user guess
+	A: join
+	B: leave

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>draw</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="floodfill.js"></script>
+		<script type="text/javascript" src="http://paperjs.org/assets/js/paper.js"></script>
+		<script type="text/paperscript" canvas="canvas" src="game.js"></script>
+		</script>
+	</head>
+
+	<body>
+		<div id="connectDialog" class="connectDialog">
+		
+		  <div class="connectDialog-content">
+			  <form id="formConnect">
+					<input id="formFieldServerHost" autocomplete="off" type="text" placeholder="127.0.0.1" maxlength="256" value="96.49.24.27:13002">
+					<input id="formFieldNickname" autocomplete="off" type="text" placeholder="Name" maxlength="16">
+					<input id="formBtnConnect" type="submit" value="Connect">
+			  </form>
+		  </div>
+		
+		</div>
+
+		<div id="header">
+			<div id="timeLeft">0</div>
+			<div id="currentWord"></div>
+		</div>
+
+		<div id="userTemplate" class="user">
+			<div class="userRank"></div>
+			<div class="userName"></div>
+			<div class="userScore"></div>
+			<img src="pen.png" class="userDrawing"></img>
+		</div>
+		<div id="userList"></div>
+
+		<div id="middle">
+			<div id="overlay" style="display: none">
+				<div id="overlayText">
+					<span id="overlayTextHeader"></span>
+					<div id="overlayTextTemplate" class="overlayText">
+						<span class="overlayTextName"></span>
+						<span class="overlayTextScore"></span>
+					</div>
+					<div id="overlayTextContent"></div>
+				</div>
+				<div id="wordchoices" style="display: none">
+					<button class="wordchoice" id="wordchoice1" type="button"></button>
+					<button class="wordchoice" id="wordchoice2" type="button"></button>
+					<button class="wordchoice" id="wordchoice3" type="button"></button>
+				</div>
+			</div>
+			<canvas id="canvas"></canvas>
+		</div>
+
+		<div id="chat">
+			<p id="chatTemplate">
+				<b></b>
+				<span></span>
+			</p>
+			<div id="chatMessageList">
+			</div>
+
+			<form id="formChat">
+				<input id="formChatInput" autocomplete="off" type="text" placeholder="Guess here" maxlength="100">
+			</form>
+		</div>
+
+		<div id="toolsContainer" style="display: flex">
+			<div id="previewColor" style="background-color: black;"></div>
+
+			<div id="colors">
+					<div class="color" style="background-color: white;"></div>
+					<div class="color" style="background-color: lightgray;"></div>
+					<div class="color" style="background-color: red;"></div>
+					<div class="color" style="background-color: darkorange;"></div>
+					<div class="color" style="background-color: yellow;"></div>
+					<div class="color" style="background-color: lime;"></div>
+					<div class="color" style="background-color: deepskyblue;"></div>
+					<div class="color" style="background-color: blue;"></div>
+					<div class="color" style="background-color: magenta;"></div>
+					<div class="color" style="background-color: pink;"></div>
+					<div class="color" style="background-color: brown;"></div>
+					<div class="color" style="background-color: black;"></div>
+					<div class="color" style="background-color: dimgray;"></div>
+					<div class="color" style="background-color: darkred;"></div>
+					<div class="color" style="background-color: orangered;"></div>
+					<div class="color" style="background-color: goldenrod;"></div>
+					<div class="color" style="background-color: darkgreen;"></div>
+					<div class="color" style="background-color: royalblue;"></div>
+					<div class="color" style="background-color: navy;"></div>
+					<div class="color" style="background-color: purple;"></div>
+					<div class="color" style="background-color: palevioletred;"></div>
+					<div class="color" style="background-color: saddlebrown;"></div>
+			</div>
+
+			<img id="toolBrush" class="tool" style="background-color: lightgray;" src="pen.png"></img>
+			<img id="toolFill" class="tool" src="bucket.png"></img>
+
+			<div id="size1" class="tool"></div>
+			<div id="size2" class="tool"></div>
+			<div id="size3" class="tool"></div>
+			<div id="size4" class="tool"></div>
+
+			<img id="toolClear" class="tool" src="clear.png"></img>
+
+		</div>
+		<img id="toolDownload" class="tool" src="download.png"></img>
+	</body>
+
+</html>
